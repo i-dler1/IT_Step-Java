@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-4.0.xsd
+                           http://www.springframework.org/schema/util
+                           https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <context:property-placeholder location="classpath:application.properties"/>
+
+    <!-- Список допустимых жанров -->
+    <util:list id="allowedGenres">
+        <value>Horror</value>
+        <value>Sci-Fi</value>
+        <value>Drama</value>
+        <value>Crime</value>
+        <value>Action</value>
+        <value>Fantasy</value>
+        <value>Adventure</value>
+        <value>Thriller</value>
+        <value>Animation</value>
+        <value>Comedy</value>
+        <value>War</value>
+        <value>Biography</value>
+        <value>Musical</value>
+    </util:list>
+
+    <bean id="movieRepository" class="com.example.demo.repository.MovieRepositoryJSON">
+        <property name="movie" value="${movie.data.file}"/>
+    </bean>
+
+    <bean id="movieService" class="com.example.demo.service.MovieServiceImpl">
+        <constructor-arg ref="movieRepository"/>
+        <constructor-arg ref="allowedGenres"/>
+    </bean>
+
+    <bean id="mainController" class="com.example.demo.controller.MainController"
+          init-method="init">
+        <constructor-arg ref="movieService"/>
+    </bean>
+
+</beans>

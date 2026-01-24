@@ -1,0 +1,527 @@
+[
+  {
+    "id": 1,
+    "title": "Saw",
+    "year": 2004,
+    "genre": "Horror",
+    "rating": 7.6
+  },
+  {
+    "id": 2,
+    "title": "The Ring",
+    "year": 2002,
+    "genre": "Horror",
+    "rating": 7.2
+  },
+  {
+    "id": 3,
+    "title": "It",
+    "year": 2017,
+    "genre": "Horror",
+    "rating": 7.3
+  },
+  {
+    "id": 4,
+    "title": "Inception",
+    "year": 2010,
+    "genre": "Sci-Fi",
+    "rating": 8.8
+  },
+  {
+    "id": 5,
+    "title": "Alien",
+    "year": 1979,
+    "genre": "Horror",
+    "rating": 8.4
+  },
+  {
+    "id": 6,
+    "title": "The Conjuring",
+    "year": 2013,
+    "genre": "Horror",
+    "rating": 7.5
+  },
+  {
+    "id": 7,
+    "title": "Titanic",
+    "year": 1997,
+    "genre": "Drama",
+    "rating": 7.8
+  },
+  {
+    "id": 8,
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "genre": "Drama",
+    "rating": 9.3
+  },
+  {
+    "id": 9,
+    "title": "Pulp Fiction",
+    "year": 1994,
+    "genre": "Crime",
+    "rating": 8.9
+  },
+  {
+    "id": 10,
+    "title": "The Dark Knight",
+    "year": 2008,
+    "genre": "Action",
+    "rating": 9.0
+  },
+  {
+    "id": 11,
+    "title": "The Green Mile",
+    "year": 1999,
+    "genre": "Drama",
+    "rating": 8.6
+  },
+  {
+    "id": 12,
+    "title": "Forrest Gump",
+    "year": 1994,
+    "genre": "Drama",
+    "rating": 8.8
+  },
+  {
+    "id": 13,
+    "title": "Fight Club",
+    "year": 1999,
+    "genre": "Drama",
+    "rating": 8.8
+  },
+  {
+    "id": 14,
+    "title": "The Matrix",
+    "year": 1999,
+    "genre": "Sci-Fi",
+    "rating": 8.7
+  },
+  {
+    "id": 15,
+    "title": "Star Wars: Episode V - The Empire Strikes Back",
+    "year": 1980,
+    "genre": "Sci-Fi",
+    "rating": 8.7
+  },
+  {
+    "id": 16,
+    "title": "The Lord of the Rings: The Return of the King",
+    "year": 2003,
+    "genre": "Fantasy",
+    "rating": 8.9
+  },
+  {
+    "id": 17,
+    "title": "Harry Potter and the Philosopher's Stone",
+    "year": 2001,
+    "genre": "Fantasy",
+    "rating": 7.6
+  },
+  {
+    "id": 18,
+    "title": "Jurassic Park",
+    "year": 1993,
+    "genre": "Adventure",
+    "rating": 8.1
+  },
+  {
+    "id": 19,
+    "title": "Terminator 2: Judgment Day",
+    "year": 1991,
+    "genre": "Action",
+    "rating": 8.6
+  },
+  {
+    "id": 20,
+    "title": "Jaws",
+    "year": 1975,
+    "genre": "Thriller",
+    "rating": 8.0
+  },
+  {
+    "id": 21,
+    "title": "The Shining",
+    "year": 1980,
+    "genre": "Horror",
+    "rating": 8.4
+  },
+  {
+    "id": 22,
+    "title": "The Exorcist",
+    "year": 1973,
+    "genre": "Horror",
+    "rating": 8.0
+  },
+  {
+    "id": 23,
+    "title": "The Walking Dead",
+    "year": 2010,
+    "genre": "Horror",
+    "rating": 8.2
+  },
+  {
+    "id": 24,
+    "title": "Get Out",
+    "year": 2017,
+    "genre": "Horror",
+    "rating": 7.7
+  },
+  {
+    "id": 25,
+    "title": "The Inheritance",
+    "year": 2020,
+    "genre": "Horror",
+    "rating": 7.4
+  },
+  {
+    "id": 26,
+    "title": "Reincarnation",
+    "year": 2022,
+    "genre": "Horror",
+    "rating": 7.8
+  },
+  {
+    "id": 27,
+    "title": "The Mist",
+    "year": 2007,
+    "genre": "Horror",
+    "rating": 7.1
+  },
+  {
+    "id": 28,
+    "title": "Annabelle",
+    "year": 2014,
+    "genre": "Horror",
+    "rating": 6.5
+  },
+  {
+    "id": 29,
+    "title": "Constantine",
+    "year": 2005,
+    "genre": "Horror",
+    "rating": 7.0
+  },
+  {
+    "id": 30,
+    "title": "The Others",
+    "year": 2001,
+    "genre": "Horror",
+    "rating": 7.6
+  },
+  {
+    "id": 31,
+    "title": "The Sixth Sense",
+    "year": 1999,
+    "genre": "Thriller",
+    "rating": 8.1
+  },
+  {
+    "id": 32,
+    "title": "The Silence of the Lambs",
+    "year": 1991,
+    "genre": "Thriller",
+    "rating": 8.6
+  },
+  {
+    "id": 33,
+    "title": "Interstellar",
+    "year": 2014,
+    "genre": "Sci-Fi",
+    "rating": 8.6
+  },
+  {
+    "id": 34,
+    "title": "Captain America: Civil War",
+    "year": 2016,
+    "genre": "Action",
+    "rating": 7.8
+  },
+  {
+    "id": 35,
+    "title": "Hachiko: A Dog's Story",
+    "year": 2009,
+    "genre": "Drama",
+    "rating": 8.1
+  },
+  {
+    "id": 36,
+    "title": "Lost in Translation",
+    "year": 2003,
+    "genre": "Drama",
+    "rating": 7.7
+  },
+  {
+    "id": 37,
+    "title": "The Lion King",
+    "year": 1994,
+    "genre": "Animation",
+    "rating": 8.5
+  },
+  {
+    "id": 38,
+    "title": "WALL-E",
+    "year": 2008,
+    "genre": "Animation",
+    "rating": 8.4
+  },
+  {
+    "id": 39,
+    "title": "Zootopia",
+    "year": 2016,
+    "genre": "Animation",
+    "rating": 8.0
+  },
+  {
+    "id": 40,
+    "title": "Spider-Man: Into the Spider-Verse",
+    "year": 2018,
+    "genre": "Animation",
+    "rating": 8.4
+  },
+  {
+    "id": 41,
+    "title": "Avengers: Endgame",
+    "year": 2019,
+    "genre": "Action",
+    "rating": 8.4
+  },
+  {
+    "id": 42,
+    "title": "Joker",
+    "year": 2019,
+    "genre": "Crime",
+    "rating": 8.4
+  },
+  {
+    "id": 43,
+    "title": "Parasite",
+    "year": 2019,
+    "genre": "Comedy",
+    "rating": 8.6
+  },
+  {
+    "id": 44,
+    "title": "1917",
+    "year": 2019,
+    "genre": "War",
+    "rating": 8.2
+  },
+  {
+    "id": 45,
+    "title": "Dune",
+    "year": 2021,
+    "genre": "Sci-Fi",
+    "rating": 8.0
+  },
+  {
+    "id": 46,
+    "title": "Everything Everywhere All at Once",
+    "year": 2022,
+    "genre": "Action",
+    "rating": 7.8
+  },
+  {
+    "id": 47,
+    "title": "Oppenheimer",
+    "year": 2023,
+    "genre": "Biography",
+    "rating": 8.3
+  },
+  {
+    "id": 48,
+    "title": "Barbie",
+    "year": 2023,
+    "genre": "Comedy",
+    "rating": 7.0
+  },
+  {
+    "id": 49,
+    "title": "The Godfather",
+    "year": 1972,
+    "genre": "Crime",
+    "rating": 9.2
+  },
+  {
+    "id": 50,
+    "title": "Schindler's List",
+    "year": 1993,
+    "genre": "Biography",
+    "rating": 8.9
+  },
+  {
+    "id": 51,
+    "title": "Gladiator",
+    "year": 2000,
+    "genre": "Action",
+    "rating": 8.5
+  },
+  {
+    "id": 52,
+    "title": "Spirited Away",
+    "year": 2001,
+    "genre": "Animation",
+    "rating": 8.6
+  },
+  {
+    "id": 53,
+    "title": "Transformers",
+    "year": 2007,
+    "genre": "Action",
+    "rating": 7.0
+  },
+  {
+    "id": 54,
+    "title": "Avatar",
+    "year": 2009,
+    "genre": "Sci-Fi",
+    "rating": 7.9
+  },
+  {
+    "id": 55,
+    "title": "Gravity",
+    "year": 2013,
+    "genre": "Sci-Fi",
+    "rating": 7.7
+  },
+  {
+    "id": 56,
+    "title": "Blade Runner 2049",
+    "year": 2017,
+    "genre": "Sci-Fi",
+    "rating": 8.0
+  },
+  {
+    "id": 57,
+    "title": "A Nightmare on Elm Street",
+    "year": 1984,
+    "genre": "Horror",
+    "rating": 7.4
+  },
+  {
+    "id": 58,
+    "title": "Friday the 13th",
+    "year": 1980,
+    "genre": "Horror",
+    "rating": 6.4
+  },
+  {
+    "id": 59,
+    "title": "Halloween",
+    "year": 1978,
+    "genre": "Horror",
+    "rating": 7.7
+  },
+  {
+    "id": 60,
+    "title": "The Texas Chain Saw Massacre",
+    "year": 1974,
+    "genre": "Horror",
+    "rating": 7.4
+  },
+  {
+    "id": 61,
+    "title": "Evil Dead",
+    "year": 2013,
+    "genre": "Horror",
+    "rating": 6.5
+  },
+  {
+    "id": 62,
+    "title": "The Cabin in the Woods",
+    "year": 2012,
+    "genre": "Horror",
+    "rating": 7.0
+  },
+  {
+    "id": 63,
+    "title": "It Chapter Two",
+    "year": 2019,
+    "genre": "Horror",
+    "rating": 6.5
+  },
+  {
+    "id": 64,
+    "title": "Toy Story",
+    "year": 1995,
+    "genre": "Animation",
+    "rating": 8.3
+  },
+  {
+    "id": 65,
+    "title": "Coco",
+    "year": 2017,
+    "genre": "Animation",
+    "rating": 8.4
+  },
+  {
+    "id": 66,
+    "title": "Frozen",
+    "year": 2013,
+    "genre": "Animation",
+    "rating": 7.4
+  },
+  {
+    "id": 67,
+    "title": "Corpse Bride",
+    "year": 2005,
+    "genre": "Animation",
+    "rating": 7.3
+  },
+  {
+    "id": 68,
+    "title": "La La Land",
+    "year": 2016,
+    "genre": "Musical",
+    "rating": 8.0
+  },
+  {
+    "id": 69,
+    "title": "Bohemian Rhapsody",
+    "year": 2018,
+    "genre": "Biography",
+    "rating": 7.9
+  },
+  {
+    "id": 70,
+    "title": "Rocky",
+    "year": 1976,
+    "genre": "Drama",
+    "rating": 8.1
+  },
+  {
+    "id": 71,
+    "title": "Baby Driver",
+    "year": 2017,
+    "genre": "Action",
+    "rating": 7.6
+  },
+  {
+    "id": 72,
+    "title": "John Wick",
+    "year": 2014,
+    "genre": "Action",
+    "rating": 7.4
+  },
+  {
+    "id": 73,
+    "title": "The Avengers",
+    "year": 2012,
+    "genre": "Action",
+    "rating": 8.0
+  },
+  {
+    "id": 74,
+    "title": "Iron Man",
+    "year": 2008,
+    "genre": "Action",
+    "rating": 7.9
+  },
+  {
+    "id": 75,
+    "title": "The Hobbit: An Unexpected Journey",
+    "year": 2012,
+    "genre": "Fantasy",
+    "rating": 7.8
+  }
+]
