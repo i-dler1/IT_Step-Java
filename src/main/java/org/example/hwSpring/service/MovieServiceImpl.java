@@ -4,10 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 import org.example.hwSpring.model.Movie;
 import org.example.hwSpring.repository.MovieRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class MovieServiceImpl implements MovieService {
 
     private final MovieRepository movieRepository;
@@ -17,6 +20,7 @@ public class MovieServiceImpl implements MovieService {
     @Getter
     private double ratingThreshold;
 
+    @Autowired
     public MovieServiceImpl(MovieRepository movieRepository, List<String> allowedGenres) {
         this.movieRepository = movieRepository;
         this.allowedGenres = allowedGenres;

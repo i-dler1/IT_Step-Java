@@ -1,12 +1,16 @@
 package org.example.hwSpring.controller;
 
+import jakarta.annotation.PostConstruct;
 import lombok.Getter;
 import org.example.hwSpring.model.Movie;
 import org.example.hwSpring.service.MovieService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Scanner;
 
+@Component
 public class MainController {
 
     private boolean running = true;
@@ -16,11 +20,13 @@ public class MainController {
 
     private Scanner scanner;
 
+    @Autowired
     public MainController(MovieService movieService) {
         this.movieService = movieService;
     }
 
-    private void init() {
+    @PostConstruct
+    public void init() {
         this.scanner = new Scanner(System.in);
     }
 
