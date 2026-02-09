@@ -1,12 +1,13 @@
 package org.example.hwSpring.service;
 
 import lombok.Getter;
-import lombok.Setter;
 import org.example.hwSpring.model.Movie;
 import org.example.hwSpring.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,15 +16,18 @@ public class MovieServiceImpl implements MovieService {
 
     private final MovieRepository movieRepository;
     private final List<String> allowedGenres;
-
-    @Setter
     @Getter
-    private double ratingThreshold;
+    private final double ratingThreshold;
+
 
     @Autowired
-    public MovieServiceImpl(MovieRepository movieRepository, List<String> allowedGenres) {
+    public MovieServiceImpl(
+            MovieRepository movieRepository,
+            @Value("${app.allowed.genres}") String genresString,
+            @Value("${app.rating.threshold}") double ratingThreshold) {
         this.movieRepository = movieRepository;
-        this.allowedGenres = allowedGenres;
+        this.allowedGenres = Arrays.asList(genresString.split(","));
+        this.ratingThreshold = ratingThreshold;
     }
 
     @Override
@@ -53,6 +57,5 @@ public class MovieServiceImpl implements MovieService {
     public List<Movie> getByYear(int minYear, int maxYear) {
         return movieRepository.findByYear(minYear, maxYear);
     }
-
 
 }
