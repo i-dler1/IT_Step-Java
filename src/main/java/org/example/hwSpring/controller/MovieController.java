@@ -2,7 +2,9 @@ package org.example.hwSpring.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.example.hwSpring.service.MovieService;
+import org.springframework.stereotype.Component;
 
+@Component
 @RequiredArgsConstructor
 public class MovieController {
 

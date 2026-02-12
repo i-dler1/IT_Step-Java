@@ -1,10 +1,12 @@
 package org.example.hwSpring.controller;
 
 import org.example.hwSpring.model.Movie;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class AdvancedSearchController {
     private final MainController mainController;
 
