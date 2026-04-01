@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .criteria { margin: 20px 0; padding: 10px; background-color: #e8f4fd; }
+        .nav-menu { margin: 20px 0; padding: 10px; background-color: #f8f9fa; }
+    </style>
+</head>
+<body>
+<h1>Search Results</h1>
+
+<div class="nav-menu">
+    <a href="/movies">Back to List</a>
+    <a href="/movies/search">New Search</a>
+</div>
+
+<div class="criteria">
+    <h3>Selected criteria:</h3>
+    <p th:if="${genre}">Genre: <span th:text="${genre}">Horror</span></p>
+    <p th:if="${minYear}">Min Year: <span th:text="${minYear}">2000</span></p>
+    <p th:if="${maxYear}">Max Year: <span th:text="${maxYear}">2010</span></p>
+    <p th:if="${minRating}">Min Rating: <span th:text="${minRating}">7.0</span></p>
+    <p th:if="${maxRating}">Max Rating: <span th:text="${maxRating}">9.0</span></p>
+    <p th:if="${genre == null and minYear == null and maxYear == null and minRating == null and maxRating == null}">
+        No criteria specified. Showing all movies.
+    </p>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Genre</th>
+        <th>Rating</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="movie : ${movies}">
+        <td th:text="${movie.id}">1</td>
+        <td><a th:href="@{'/movies/' + ${movie.id}}" th:text="${movie.title}">Movie Title</a></td>
+        <td th:text="${movie.year}">2020</td>
+        <td th:text="${movie.genre}">Drama</td>
+        <td th:text="${movie.rating}">8.5</td>
+    </tr>
+    </tbody>
+</table>
+
+<p th:if="${#lists.isEmpty(movies)}">No movies match your criteria.</p>
+<p th:if="${not #lists.isEmpty(movies)}" th:text="'Found ' + ${movies.size()} + ' movies'"></p>
+</body>
+</html>

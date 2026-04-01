@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Horror Movies After 2000</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .stats { margin: 20px 0; padding: 15px; background-color: #f0f0f0; border-radius: 5px; }
+        .stat-item { margin: 5px 0; }
+        .nav-menu { margin: 20px 0; padding: 10px; background-color: #f8f9fa; }
+    </style>
+</head>
+<body>
+<h1>Horror Movies After 2000</h1>
+
+<div class="nav-menu">
+    <a href="/movies">Back to List</a>
+</div>
+
+<div class="stats">
+    <h3>Statistics:</h3>
+    <div class="stat-item">Total movies: <strong th:text="${totalMovies}">10</strong></div>
+    <div class="stat-item">Rating threshold: <strong th:text="${ratingThreshold}">7.0</strong></div>
+    <div class="stat-item">Movies above threshold: <strong th:text="${aboveThreshold}">5</strong></div>
+    <div class="stat-item">Average rating: <strong th:text="${#numbers.formatDecimal(averageRating, 1, 2)}">7.5</strong></div>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Rating</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="movie : ${movies}"
+        th:style="${movie.rating >= ratingThreshold} ? 'background-color: #d4edda' : ''">
+        <td th:text="${movie.id}">1</td>
+        <td><a th:href="@{'/movies/' + ${movie.id}}" th:text="${movie.title}">Movie Title</a></td>
+        <td th:text="${movie.year}">2020</td>
+        <td th:text="${movie.rating}">7.5</td>
+        <td>
+            <span th:if="${movie.rating >= ratingThreshold}" style="color: green;">Above threshold</span>
+            <span th:if="${movie.rating < ratingThreshold}" style="color: orange;">Below threshold</span>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<p th:if="${#lists.isEmpty(movies)}">No horror movies found after 2000.</p>
+</body>
+</html>

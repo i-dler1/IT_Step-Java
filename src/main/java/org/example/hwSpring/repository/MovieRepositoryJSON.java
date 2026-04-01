@@ -1,5 +1,6 @@
 package org.example.hwSpring.repository;
 
+import com.fasterxml.jackson.databind.SerializationFeature;
 import org.example.hwSpring.model.Movie;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -12,6 +13,8 @@ import java.io.IOException;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.Optional;
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 
 @Repository
@@ -55,6 +58,48 @@ public class MovieRepositoryJSON implements MovieRepository {
                 .filter(m -> m.getYear() >= minYear
                         && m.getYear() <= maxYear)
                 .collect(Collectors.toList());
+    }
+
+    private final AtomicLong idGenerator = new AtomicLong(100);
+
+    @Override
+    public Optional<Movie> findById(Long id) {
+        return getAllMovies().stream()
+                .filter(m -> m.getId().equals(id))
+                .findFirst();
+    }
+
+    @Override
+    public Movie save(Movie movie) {
+        List<Movie> movies = getAllMovies();
+
+        if (movie.getId() == null) {
+            movie.setId(idGenerator.getAndIncrement());
+            movies.add(movie);
+        } else {
+            movies.removeIf(m -> m.getId().equals(movie.getId()));
+            movies.add(movie);
+        }
+
+        writeMovies(movies);
+        return movie;
+    }
+
+    @Override
+    public void deleteById(Long id) {  // <-- ДОБАВИТЬ
+        List<Movie> movies = getAllMovies();
+        movies.removeIf(m -> m.getId().equals(id));
+        writeMovies(movies);
+    }
+
+    private void writeMovies(List<Movie> movies) {  // <-- ДОБАВИТЬ
+        try {
+            ObjectMapper mapper = newMapper();
+            mapper.enable(SerializationFeature.INDENT_OUTPUT);
+            mapper.writeValue(new File(movieFilePath), movies);
+        } catch (IOException e) {
+            throw new RuntimeException("Error writing movie data to: " + movieFilePath, e);
+        }
     }
 
     private ObjectMapper newMapper() {

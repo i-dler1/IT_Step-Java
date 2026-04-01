@@ -58,4 +58,26 @@ public class MovieServiceImpl implements MovieService {
         return movieRepository.findByYear(minYear, maxYear);
     }
 
+    @Override
+    public Movie getMovieById(Long id) {
+        return movieRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Movie not found with id: " + id));
+    }
+
+    @Override
+    public Movie saveMovie(Movie movie) {
+        return movieRepository.save(movie);
+    }
+
+    @Override
+    public Movie updateMovie(Movie movie) {
+        getMovieById(movie.getId());
+        return movieRepository.save(movie);
+    }
+
+    @Override
+    public void deleteMovie(Long id) {
+        getMovieById(id);
+        movieRepository.deleteById(id);
+    }
 }
