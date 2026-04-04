@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Details</title>
+    <style>
+        .movie-details { margin: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        .field { margin: 10px 0; }
+        .label { font-weight: bold; display: inline-block; width: 100px; }
+        .nav-menu { margin: 20px 0; padding: 10px; background-color: #f8f9fa; }
+        .nav-menu a { margin-right: 15px; text-decoration: none; color: #007bff; }
+    </style>
+</head>
+<body>
+<h1>Movie Details</h1>
+
+<div class="nav-menu">
+    <a href="/movies">Back to List</a>
+    <a th:href="@{'/movies/' + ${movie.id} + '/edit'}">Edit</a>
+    <a th:href="@{'/movies/delete/' + ${movie.id}}"
+       onclick="return confirm('Are you sure?')">Delete</a>
+</div>
+
+<div class="movie-details">
+    <div class="field">
+        <span class="label">ID:</span>
+        <span th:text="${movie.id}">1</span>
+    </div>
+    <div class="field">
+        <span class="label">Title:</span>
+        <span th:text="${movie.title}">Movie Title</span>
+    </div>
+    <div class="field">
+        <span class="label">Year:</span>
+        <span th:text="${movie.year}">2020</span>
+    </div>
+    <div class="field">
+        <span class="label">Genre:</span>
+        <span th:text="${movie.genre}">Drama</span>
+    </div>
+    <div class="field">
+        <span class="label">Rating:</span>
+        <span th:text="${movie.rating}">8.5</span>
+    </div>
+</div>
+</body>
+</html>

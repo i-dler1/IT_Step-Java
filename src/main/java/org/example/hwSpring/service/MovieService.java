@@ -16,4 +16,9 @@ public interface MovieService {
     List<Movie> getByYear(int minYear, int maxYear);
 
     double getRatingThreshold();
+
+    Movie getMovieById(Long id);
+    Movie saveMovie(Movie movie);
+    Movie updateMovie(Movie movie);
+    void deleteMovie(Long id);
 }
